@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue';
-import { useAppConfig, useFetch } from 'nuxt/app';
 import { onMounted, ref } from 'vue';
 import type { WPInstagramPage } from '~/server/api/instagram'
 
