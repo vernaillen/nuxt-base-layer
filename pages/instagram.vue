@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useHead } from '@unhead/vue';
-import { onMounted, ref } from 'vue';
 import type { WPInstagramPage } from '~/server/api/instagram'
 
 const igContent = ref<string>()
