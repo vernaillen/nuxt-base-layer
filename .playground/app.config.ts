@@ -1,5 +1,7 @@
 export default defineAppConfig({
-  myLayer: {
-    name: 'My amazing Nuxt layer (overwritten)'
+  instagram: {
+    enabled: true,
+    wpPageId: 10053,
+    wpBaseUrl: 'https://wouternew.vernaillen.com/',
   }
 })
