@@ -53,12 +53,3 @@ onMounted(() => {
     v-html="igContent"
   />
 </template>
-
-<style>
-#sb_instagram .sbi_follow_btn a {
-  @apply !text-base !text-white !bg-primary !py-2 !px-6 hover:!bg-primary hover:!bg-opacity-80 !mx-2 !my-10 !rounded-md !shadow-none
-}
-#sb_instagram #sbi_images .sbi_inner_wrap {
-  @apply rounded-md overflow-hidden relative;
-}
-</style>

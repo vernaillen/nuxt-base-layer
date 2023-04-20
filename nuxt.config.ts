@@ -9,6 +9,8 @@ export default defineNuxtConfig({
   ],
   css: [
     join(currentDir, './assets/css/tailwind.css'),
+    join(currentDir, './assets/css/markdown.css'),
+    join(currentDir, './assets/css/prose.css'),
     'animate.css/animate.min.css',
   ],
 })
