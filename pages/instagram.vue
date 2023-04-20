@@ -35,6 +35,11 @@ if (igConfig.enabled) {
         type: 'text/javascript',
       },
     ],
+    style: [
+      {
+        innerHTML: ':root { background-color: transparent !important; }'
+      }
+    ]
   })
 }
 onMounted(() => {
