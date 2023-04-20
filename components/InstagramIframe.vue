@@ -1,4 +1,8 @@
 <script setup lang="ts">
+/*
+DISABLED for now cause loading this from a nuxt layer or nuxt module fails.
+workaround is to copy the component to the main nuxt instance
+
 import { iframeResize } from 'iframe-resizer'
 import { onMounted, ref } from 'vue';
 
@@ -6,7 +10,7 @@ const iframeRef = ref()
 onMounted(() => {
   const iframeEl: HTMLIFrameElement = iframeRef.value
   iframeEl.addEventListener('load', () => iframeResize({}, iframeEl))
-})
+})*/
 </script>
 
 <template>
