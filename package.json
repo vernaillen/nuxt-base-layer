@@ -14,8 +14,8 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
     "changelogen": "^0.5.3",
-    "eslint": "^8.28.0",
-    "nuxt": "^3.0.0",
+    "eslint": "^8.39.0",
+    "nuxt": "^3.4.2",
     "typescript": "^5.0.4"
   },
   "dependencies": {
