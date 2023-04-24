@@ -1,11 +1,17 @@
 <script setup lang="ts">
 import type { WPInstagramPage } from '~/server/api/instagram'
+import { useInstagramCache } from '~/stores/instagramCache'
 
 const igContent = ref<string>()
 const igConfig = useAppConfig().instagram
 if (igConfig.enabled) {
-  const { data } = await useFetch<WPInstagramPage>('/api/instagram')
-  igContent.value = data.value.content.rendered
+  if (useInstagramCache().hasContent && useInstagramCache().content.length > 0) {
+    igContent.value = useInstagramCache().content
+  } else {
+    const { data } = await useFetch<WPInstagramPage>('/api/instagram')
+    igContent.value = data.value.content.rendered
+    useInstagramCache().addContent(data.value.content.rendered)
+  }
   useHead({
     link: [
       {
