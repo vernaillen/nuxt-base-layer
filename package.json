@@ -13,17 +13,16 @@
     "postinstall": "npx nuxi@latest prepare .playground",
     "release": "changelogen --release && npm publish --access public && git push --follow-tags"
   },
+  "dependencies": {
+    "@nuxtjs/tailwindcss": "^6.6.6",
+    "animate.css": "^4.1.1",
+    "nuxt-icon": "^0.3.3"
+  },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
     "changelogen": "^0.5.3",
     "eslint": "^8.39.0",
     "nuxt": "^3.4.2",
     "typescript": "^5.0.4"
-  },
-  "dependencies": {
-    "@nuxtjs/tailwindcss": "^6.6.6",
-    "animate.css": "^4.1.1",
-    "iframe-resizer": "^4.3.6",
-    "nuxt-icon": "^0.3.3"
   }
 }

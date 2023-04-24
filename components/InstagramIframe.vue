@@ -1,11 +1,16 @@
 <script setup lang="ts">
-import { iframeResize } from 'iframe-resizer'
-import { onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
 
-const iframeRef = ref()
+useHead({
+  script: [
+    {
+      src: '/sbi/iframeResizer.min.js',
+      type: 'text/javascript',
+    },
+  ],
+})
 onMounted(() => {
-  const iframeEl: HTMLIFrameElement = iframeRef.value
-  iframeEl.addEventListener('load', () => iframeResize({}, iframeEl))
+  iFrameResize({}, '#iframeElement')
 })
 </script>
 
@@ -23,7 +28,7 @@ onMounted(() => {
     </div>
   </div>
   <iframe
-    ref="iframeRef"
+    id="iframeElement"
     src="/instagram"
     width="100%"
     class="w-full mx-[-10px] mb-14"
