@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import iframeResizer from 'iframe-resizer/js/iframeResizer.js';
+import { iframeResizer } from 'iframe-resizer'
 import { onMounted, ref } from 'vue'
 
 const iframeRef = ref()
