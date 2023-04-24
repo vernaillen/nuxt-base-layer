@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { iframeResizer } from 'iframe-resizer'
+import { iframeResize } from 'iframe-resizer'
 import { onMounted, ref } from 'vue'
 
 const iframeRef = ref()
 onMounted(() => {
   const iframeEl: HTMLIFrameElement = iframeRef.value
-  iframeEl.addEventListener('load', () => iframeResizer({}, iframeEl))
+  iframeEl.addEventListener('load', () => iframeResize({}, iframeEl))
 })
 </script>
 
