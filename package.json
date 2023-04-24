@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.1.18",
   "main": "./nuxt.config.ts",
+  "typings": "./index.d.ts",
   "scripts": {
     "dev": "nuxi prepare .playground && nuxi dev .playground",
     "build": "nuxi build .playground",
