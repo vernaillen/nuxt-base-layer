@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.6.6",
+    "@types/iframe-resizer": "^3.5.9",
     "animate.css": "^4.1.1",
     "iframe-resizer": "^4.3.6",
     "nuxt-icon": "^0.3.3"
