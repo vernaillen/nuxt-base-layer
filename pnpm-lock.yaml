@@ -1,9 +1,6 @@
 lockfileVersion: '6.0'
 
 dependencies:
-  '@nuxtjs/color-mode':
-    specifier: ^3.2.0
-    version: 3.2.0
   '@nuxtjs/tailwindcss':
     specifier: ^6.6.6
     version: 6.6.6(webpack@5.80.0)
@@ -27,6 +24,9 @@ devDependencies:
   '@nuxt/eslint-config':
     specifier: ^0.1.1
     version: 0.1.1(eslint@8.39.0)
+  '@nuxtjs/color-mode':
+    specifier: ^3.2.0
+    version: 3.2.0
   changelogen:
     specifier: ^0.5.3
     version: 0.5.3
@@ -911,7 +911,7 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
-    dev: false
+    dev: true
 
   /@nuxtjs/tailwindcss@6.6.6(webpack@5.80.0):
     resolution: {integrity: sha512-cUiwO28TQYww+2H8x1BtxGjYpzzAdiHi2S4z6seGDM0g0sv5P1Zn8VO6N9crSxNkAZjKVhof9CD+D8ykMloZbA==}
