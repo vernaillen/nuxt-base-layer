@@ -21,6 +21,7 @@ watch(() => colorMode.value, (newColorMode) => {
   if(innerDoc && innerDoc.getElementsByTagName('html')[0]) {
     innerDoc.getElementsByTagName('html')[0].classList.remove('light')
     innerDoc.getElementsByTagName('html')[0].classList.remove('dark')
+    innerDoc.getElementsByTagName('html')[0].classList.remove('sepia')
     innerDoc.getElementsByTagName('html')[0].classList.add(newColorMode)
   }
 })
