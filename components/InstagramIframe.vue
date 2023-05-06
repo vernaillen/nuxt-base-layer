@@ -1,17 +1,8 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 
-useHead({
-  script: [
-    {
-      src: '/sbi/iframeResizer.min.js',
-      type: 'text/javascript',
-    },
-  ],
-})
 const iframeRef = ref<HTMLIFrameElement>()
 onMounted(() => {
-  //iFrameResize({}, '#iframeElement')
   if (iframeRef.value) iFrameResize({}, iframeRef.value)
 })
 

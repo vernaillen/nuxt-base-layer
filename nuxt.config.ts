@@ -7,10 +7,15 @@ export default defineNuxtConfig({
   css: [
     'animate.css/animate.min.css',
   ],
-  colorMode: {
-    classSuffix: '',
-  },
-  /*routeRules: {
-    '/instagram': { ssr: false },
-  }*/
+  app: {
+    head: {
+      script: [
+        {
+          src: '/sbi/iframeResizer.min.js',
+          type: 'text/javascript',
+          async: true
+        }
+      ]
+    }
+}
 })
