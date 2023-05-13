@@ -1,7 +1,7 @@
 {
   "name": "@vernaillen/nuxt-base-layer",
   "type": "module",
-  "version": "0.1.26",
+  "version": "0.1.27",
   "main": "./nuxt.config.ts",
   "typings": "./index.d.ts",
   "scripts": {
@@ -14,8 +14,8 @@
     "release": "changelogen --release && npm publish --access public && git push --follow-tags"
   },
   "dependencies": {
-    "@nuxtjs/tailwindcss": "^6.6.6",
-    "@pinia/nuxt": "^0.4.9",
+    "@nuxtjs/tailwindcss": "^6.6.8",
+    "@pinia/nuxt": "^0.4.10",
     "@vueuse/core": "^10.1.0",
     "@vueuse/nuxt": "^10.1.0",
     "animate.css": "^4.1.1",
@@ -28,5 +28,6 @@
     "eslint": "^8.39.0",
     "nuxt": "^3.4.3",
     "typescript": "^5.0.4"
-  }
+  },
+  "packageManager": "pnpm@8.4.0"
 }
