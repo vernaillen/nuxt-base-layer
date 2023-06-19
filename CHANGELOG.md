@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.2.3
+
+[compare changes](https://undefined/undefined/compare/v0.2.2...v0.2.3)
+
+
+### 🏡 Chore
+
+  - **release:** V0.2.1 (00aac02)
+  - **release:** V0.2.2 (36a6015)
+
+### ❤️  Contributors
+
+- Wouter Vernaillen <wouter@vernaillen.com>
+
 ## v0.2.2
 
 [compare changes](https://undefined/undefined/compare/v0.2.2...v0.2.2)
