@@ -1,13 +1,8 @@
 # Changelog
 
-
-## v0.2.2
-
-[compare changes](https://undefined/undefined/compare/v0.2.1...v0.2.2)
-
 ## v0.2.1
 
-[compare changes](https://undefined/undefined/compare/v0.1.29...v0.2.1)
+[compare changes](https://undefined/undefined/compare/v0.2.2...v0.2.1)
 
 ## v0.1.29
 
