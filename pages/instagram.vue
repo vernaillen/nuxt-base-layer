@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { WPInstagramPage } from '~/server/api/instagram'
-import { useInstagramCache } from '~/stores/instagramCache'
 
 const igContent = ref<string>()
 const igConfig = useAppConfig().instagram
