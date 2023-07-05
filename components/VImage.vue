@@ -9,7 +9,7 @@ export interface Props {
   placeholder?: string
   fit?: string
   format?: string
-  modifiers?: string
+  modifiers?: Object
   finalOpacity?: number
 }
 const props = withDefaults(defineProps<Props>(), {
@@ -17,22 +17,14 @@ const props = withDefaults(defineProps<Props>(), {
   placeholder: 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=',
   fit: 'cover',
   format: 'webp',
-  modifiers: '',
   finalOpacity: 1
-})
-const modifiers = computed(() => {
-  if (props.modifiers && props.modifiers.length > 0) {
-    return { modifiers: props.modifiers }
-  } else {
-    return null
-  }
 })
 const imgUrl = img(props.src, {
     width: props.width,
     height: props.height,
     fit: props.fit,
     format: props.format,
-    ...modifiers.value
+    ...props.modifiers
 })
 const wrapperClass = computed(() => {
   return 'w-[' + props.width + 'px] h-[' + props.height + 'px] max-w-full'
