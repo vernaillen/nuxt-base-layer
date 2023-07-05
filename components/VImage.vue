@@ -20,23 +20,19 @@ const props = withDefaults(defineProps<Props>(), {
   modifiers: '',
   finalOpacity: 1
 })
-const imgUrl = computed(() => {
+const modifiers = computed(() => {
   if (props.modifiers && props.modifiers.length > 0) {
-    return img(props.src, {
-      width: props.width,
-      height: props.height,
-      fit: props.fit,
-      format: props.format,
-      modifiers: props.modifiers
-    })
+    return { modifiers: props.modifiers }
   } else {
-    return img(props.src, {
-      width: props.width,
-      height: props.height,
-      fit: props.fit,
-      format: props.format
-    })
+    return null
   }
+})
+const imgUrl = img(props.src, {
+    width: props.width,
+    height: props.height,
+    fit: props.fit,
+    format: props.format,
+    ...modifiers.value
 })
 const wrapperClass = computed(() => {
   return 'w-[' + props.width + 'px] h-[' + props.height + 'px] max-w-full'
