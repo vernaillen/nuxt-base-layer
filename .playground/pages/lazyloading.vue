@@ -33,6 +33,7 @@
       :width="960"
       :height="442"
       alt="test image 5"
+      modifiers=""
     />
   </div>
 </template>
