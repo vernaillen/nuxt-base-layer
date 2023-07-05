@@ -1,8 +1,9 @@
 export default defineNuxtConfig({
   modules: [
-    'nuxt-icon',
-    '@vueuse/nuxt',
+    '@nuxt/image',
+    '@vueuse/nuxt'
   ],
+
   app: {
     head: {
       script: [
@@ -13,5 +14,5 @@ export default defineNuxtConfig({
         }
       ]
     }
-}
+  }
 })
