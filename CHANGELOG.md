@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.2.9
+
+[compare changes](https://undefined/undefined/compare/v0.2.8...v0.2.9)
+
+### 🏡 Chore
+
+- Package updates (b68e8c1)
+- Package updates (dc619c0)
+- Package updates (f0d53b0)
+
+### ❤️  Contributors
+
+- Wouter Vernaillen <wouter@vernaillen.com>
+
 ## v0.2.8
 
 [compare changes](https://undefined/undefined/compare/v0.2.7...v0.2.8)
