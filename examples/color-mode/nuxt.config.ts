@@ -3,9 +3,9 @@ export default defineNuxtConfig({
   extends: '../../',
   modules: [
     '@nuxtjs/color-mode',
-    '@nuxtjs/tailwindcss',
+    '@nuxtjs/tailwindcss'
   ],
   css: [
-    '~/assets/css/tailwind.css',
-  ],
+    '~/assets/css/tailwind.css'
+  ]
 })

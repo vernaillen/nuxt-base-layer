@@ -20,11 +20,11 @@ const props = withDefaults(defineProps<Props>(), {
   finalOpacity: 1
 })
 const imgUrl = img(props.src, {
-    width: props.width,
-    height: props.height,
-    fit: props.fit,
-    format: props.format,
-    ...props.modifiers
+  width: props.width,
+  height: props.height,
+  fit: props.fit,
+  format: props.format,
+  ...props.modifiers
 })
 const wrapperClass = computed(() => {
   return 'w-[' + props.width + 'px] h-[' + props.height + 'px] max-w-full'
