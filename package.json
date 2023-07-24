@@ -1,16 +1,17 @@
 {
   "name": "@vernaillen/nuxt-base-layer",
   "type": "module",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "main": "./nuxt.config.ts",
   "typings": "./index.d.ts",
   "scripts": {
     "dev": "nuxi prepare .playground && nuxi dev .playground",
-    "build": "nuxi prepare && nuxi build .playground",
+    "build": "nuxi prepare && nuxi prepare .playground && nuxi build .playground",
     "generate": "nuxi generate .playground",
     "preview": "nuxi preview .playground",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "postinstall": "nuxi prepare",
     "release": "pnpm run build && changelogen --release && npm publish --access public && git push --follow-tags"
   },
   "dependencies": {
@@ -28,5 +29,5 @@
     "nuxt": "^3.6.5",
     "typescript": "^5.1.6"
   },
-  "packageManager": "pnpm@8.6.3"
+  "packageManager": "pnpm@8.6.10"
 }
