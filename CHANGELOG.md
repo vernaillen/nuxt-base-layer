@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.13
+
+[compare changes](https://undefined/undefined/compare/v0.2.12...v0.2.13)
+
 ## v0.2.12
 
 [compare changes](https://undefined/undefined/compare/v0.2.11...v0.2.12)
