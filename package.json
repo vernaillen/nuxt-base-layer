@@ -1,17 +1,17 @@
 {
   "name": "@vernaillen/nuxt-base-layer",
   "type": "module",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "main": "./nuxt.config.ts",
   "typings": "./index.d.ts",
   "scripts": {
     "dev": "nuxi prepare .playground && nuxi dev .playground",
-    "build": "nuxi build .playground",
+    "build": "nuxi prepare && nuxi build .playground",
     "generate": "nuxi generate .playground",
     "preview": "nuxi preview .playground",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "release": "changelogen --release && npm publish --access public && git push --follow-tags"
+    "release": "pnpm run build && changelogen --release && npm publish --access public && git push --follow-tags"
   },
   "dependencies": {
     "@nuxt/image": "1.0.0-rc.1",
@@ -20,11 +20,12 @@
     "vue3-lazyload": "^0.3.6"
   },
   "devDependencies": {
+    "@nuxt/devtools": "^0.7.1",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "changelogen": "^0.5.4",
-    "eslint": "^8.44.0",
-    "nuxt": "^3.6.2",
+    "eslint": "^8.45.0",
+    "nuxt": "^3.6.5",
     "typescript": "^5.1.6"
   },
   "packageManager": "pnpm@8.6.3"
