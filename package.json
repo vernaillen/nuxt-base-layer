@@ -1,7 +1,7 @@
 {
   "name": "@vernaillen/nuxt-base-layer",
   "type": "module",
-  "version": "0.2.14",
+  "version": "0.2.15",
   "main": "./nuxt.config.ts",
   "typings": "./index.d.ts",
   "scripts": {
@@ -11,7 +11,7 @@
     "preview": "nuxi preview .playground",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "nuxi prepare && nuxi prepare .playground",
+    "postinstall": "npx nuxi@latest prepare",
     "release": "pnpm run build && changelogen --release && npm publish --access public && git push --follow-tags"
   },
   "dependencies": {
