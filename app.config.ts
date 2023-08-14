@@ -1,4 +1,8 @@
 export default defineAppConfig({
+  github: {
+    repo: '',
+    dateFormat: 'DD MMMM YYYY'
+  },
   instagram: {
     enabled: false
   }
