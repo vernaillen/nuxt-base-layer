@@ -1,7 +1,8 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    'nuxt-time'
   ],
 
   app: {
