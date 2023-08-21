@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.2.18
+
+[compare changes](https://undefined/undefined/compare/v0.2.17...v0.2.18)
+
+### 🏡 Chore
+
+- Package updates (98a47f4)
+
+### ❤️  Contributors
+
+- Wouter Vernaillen <wouter@vernaillen.com>
+
 ## v0.2.17
 
 [compare changes](https://undefined/undefined/compare/v0.2.16...v0.2.17)
