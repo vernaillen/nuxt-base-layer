@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
+const appConfig = useAppConfig();
+const enabled = appConfig.instagram?.enabled
+console.log('InstagramIframe', enabled)
 
 const iframeRef = ref<HTMLIFrameElement>()
 onMounted(() => {
-  if (iframeRef.value) iFrameResize({}, iframeRef.value)
+  if (enabled && iframeRef.value) { iFrameResize({}, iframeRef.value) }
 })
 
 const colorMode = useColorMode()
 watch(() => colorMode.value, (newColorMode) => {
-  const innerDoc = iframeRef.value?.contentDocument || iframeRef.value?.contentWindow.document;
-  if(innerDoc && innerDoc.getElementsByTagName('html')[0]) {
+  const innerDoc = iframeRef.value?.contentDocument || iframeRef.value?.contentWindow.document
+  if (innerDoc && innerDoc.getElementsByTagName('html')[0]) {
     innerDoc.getElementsByTagName('html')[0].classList.remove('light')
     innerDoc.getElementsByTagName('html')[0].classList.remove('dark')
     innerDoc.getElementsByTagName('html')[0].classList.remove('sepia')
@@ -21,6 +24,7 @@ watch(() => colorMode.value, (newColorMode) => {
 
 <template>
   <div
+    v-if="enabled"
     id="iframeLoadingSpinner"
     class="m-auto w-full text-center relative"
   >
@@ -45,6 +49,7 @@ watch(() => colorMode.value, (newColorMode) => {
     </div>
   </div>
   <iframe
+    v-if="enabled"
     id="iframeElement"
     ref="iframeRef"
     src="/instagram"
@@ -52,4 +57,15 @@ watch(() => colorMode.value, (newColorMode) => {
     width="100%"
     class="w-full mx-[-10px] mb-14"
   />
+  <div v-else>
+    Instagram is disabled.<br><br>
+    You can enabled it by adding this to app.config.ts:<br>
+    <code>
+      instagram: {
+        enabled: true,
+        wpPageId: 1234,
+        wpBaseUrl: 'https://example.com',
+      }
+    </code>
+  </div>
 </template>
