@@ -2,7 +2,6 @@
 import { onMounted } from 'vue'
 const appConfig = useAppConfig();
 const enabled = appConfig.instagram?.enabled
-console.log('InstagramIframe', enabled)
 
 const iframeRef = ref<HTMLIFrameElement>()
 onMounted(() => {
