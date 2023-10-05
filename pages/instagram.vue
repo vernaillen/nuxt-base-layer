@@ -50,7 +50,7 @@ if (igConfig.enabled) {
 onMounted(() => {
   if (window.parent.document) {
     const spinner = window.parent.document.getElementById('iframeLoadingSpinner')
-    if (spinner) { spinner.classList.add('animate__animated', 'animate__fadeOut') }
+    if (spinner) { spinner.classList.add('transition-opacity', 'opacity-0') }
   }
 })
 </script>
