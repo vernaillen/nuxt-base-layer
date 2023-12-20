@@ -15,8 +15,8 @@ const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () =>
 
 <template>
   <span v-if="commits && commits[0]">
-    built on <NuxtTime :datetime="commits[0].commit.committer.date" month="long" day="numeric" year="numeric" :locale="locale" />
-    (<NuxtLink :href="commits[0].html_url" target="_blank">
+    last updated on <NuxtTime :datetime="commits[0].commit.committer.date" month="long" day="numeric" year="numeric" :locale="locale" />
+    (last commit: <NuxtLink :href="commits[0].html_url" target="_blank">
       {{ commits[0].sha.slice(0, 7) }}
     </NuxtLink>)
   </span>
