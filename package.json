@@ -1,7 +1,7 @@
 {
   "name": "@vernaillen/nuxt-base-layer",
   "type": "module",
-  "version": "0.2.21",
+  "version": "0.2.22",
   "main": "./nuxt.config.ts",
   "typings": "./index.d.ts",
   "scripts": {
@@ -15,20 +15,20 @@
     "release": "pnpm run build && changelogen --release && npm publish --access public && git push --follow-tags"
   },
   "dependencies": {
-    "@nuxt/image": "1.0.0-rc.3",
-    "@vueuse/core": "^10.4.1",
-    "@vueuse/nuxt": "^10.4.1",
+    "@nuxt/image": "1.1.0",
+    "@vueuse/core": "^10.7.0",
+    "@vueuse/nuxt": "^10.7.0",
     "nuxt-time": "^0.1.1",
     "vue3-lazyload": "^0.3.8"
   },
   "devDependencies": {
-    "@nuxt/devtools": "1.0.0-beta.0",
-    "@nuxtjs/color-mode": "^3.3.0",
+    "@nuxt/devtools": "1.0.6",
+    "@nuxtjs/color-mode": "^3.3.2",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "changelogen": "^0.5.5",
-    "eslint": "^8.50.0",
-    "nuxt": "^3.7.4",
-    "typescript": "^5.2.2"
+    "eslint": "^8.56.0",
+    "nuxt": "^3.8.2",
+    "typescript": "^5.3.3"
   },
   "packageManager": "pnpm@8.6.10"
 }
