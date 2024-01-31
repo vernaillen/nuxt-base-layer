@@ -1,4 +1,4 @@
-import pkg from './node_modules/nuxt/package.json'
+import nuxtPkg from 'nuxt/package.json'
 
 export default defineNuxtConfig({
   modules: [
@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      nuxtVersion: pkg.version
+      nuxtVersion: nuxtPkg.version
     }
   }
 })
