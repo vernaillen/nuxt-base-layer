@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.2.24
+
+[compare changes](https://github.com/vernaillen/nuxt-base-layer/compare/v0.2.23...v0.2.24)
+
+### 🏡 Chore
+
+- **release:** V0.2.23 ([9d29f6f](https://github.com/vernaillen/nuxt-base-layer/commit/9d29f6f))
+- Package updates ([108dd6e](https://github.com/vernaillen/nuxt-base-layer/commit/108dd6e))
+
+### ❤️ Contributors
+
+- Wouter Vernaillen <wouter@vernaillen.com>
+
 ## v0.2.23
 
 [compare changes](https://github.com/vernaillen/nuxt-base-layer/compare/v0.2.22...v0.2.23)
