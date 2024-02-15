@@ -4,7 +4,7 @@ export default defineAppConfig({
   },
   instagram: {
     enabled: true,
-    wpPageId: 10053,
-    wpBaseUrl: 'https://wouternew.vernaillen.com/',
+    wpPageId: 30201,
+    wpBaseUrl: 'https://wpanneleen.vernaillen.com/',
   }
 })
