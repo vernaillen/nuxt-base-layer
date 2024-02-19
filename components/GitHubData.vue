@@ -18,7 +18,7 @@ const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () =>
   <span v-if="commits && commits[0]" class="grid md:grid-cols-2">
     <div class="md:text-end md:mr-3">
       built with <Icon name="mdi:heart" color="red" />
-      using <NuxtLink href="https://nuxt.com" target="_blank"><Icon class="w-12 -mt-1" name="logos:nuxt-icon" /> Nuxt {{ config.public.nuxtVersion }}</NuxtLink>
+      using <NuxtLink href="https://nuxt.com" target="_blank"><Icon class="-mt-1" name="logos:nuxt-icon" /> Nuxt {{ config.public.nuxtVersion }}</NuxtLink>
     </div>
     <div class="md:text-start md:ml-3">
       last updated on <NuxtLink :href="commits[0].html_url" target="_blank">
