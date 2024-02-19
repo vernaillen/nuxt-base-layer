@@ -3,16 +3,27 @@ const route = useRoute()
 const isIG = computed(() => {
   return route.path.startsWith('/instagram')
 })
+
+const links = [
+  {
+    label: 'Instagram',
+    to: '/'
+  },
+  {
+    label: 'Lazy Loading Images',
+    to: '/lazyloading'
+  }
+]
 </script>
 
 <template>
-  <div>
-    <header v-if="!isIG" class="p-4">
-      <NuxtLink to="/">Home</NuxtLink> |
-      <NuxtLink to="/lazyloading">Lazy Loading Images</NuxtLink> |
-      <NuxtLink to="/github">GitHub</NuxtLink>
-      <br><br>
-    </header>
+  <UMain>
+    <UHeader v-if="!isIG" title="@vernaillen/nuxt-base-layer" :links="links" class="p-4" />
     <NuxtPage/>
-  </div>
+    <UFooter v-if="!isIG">
+      <template #center>
+        <GitHub/>
+      </template>
+    </UFooter>
+  </UMain>
 </template>

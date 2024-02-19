@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "nuxt-base-layer-playground",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate"
+  },
+  "devDependencies": {
+    "@nuxt/ui-pro": "^0.7.5",
+    "nuxt": "^3.10.2"
+  }
+}
