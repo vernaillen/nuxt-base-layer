@@ -18,12 +18,11 @@ const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () =>
   <span v-if="commits && commits[0]" class="grid md:grid-cols-2">
     <div class="md:text-end md:mr-3">
       built with <Icon name="mdi:heart" color="red" />
-      using <NuxtLink href="https://nuxt.com" target="_blank"><Icon class="w-12 -mt-1" name="logos:nuxt" /> v{{ config.public.nuxtVersion }}</NuxtLink>
+      using <NuxtLink href="https://nuxt.com" target="_blank"><Icon class="w-12 -mt-1" name="logos:nuxt-icon" /> Nuxt {{ config.public.nuxtVersion }}</NuxtLink>
     </div>
     <div class="md:text-start md:ml-3">
-      last updated on <NuxtTime :datetime="commits[0].commit.committer.date" month="long" day="numeric" year="numeric" :locale="locale" /> -
-      <NuxtLink :href="commits[0].html_url" target="_blank">
-        <Icon name="mdi:github" /> {{ commits[0].sha.slice(0, 7) }}
+      last updated on <NuxtLink :href="commits[0].html_url" target="_blank">
+        <NuxtTime :datetime="commits[0].commit.committer.date" month="long" day="numeric" year="numeric" :locale="locale" /> <Icon name="mdi:github" />
       </NuxtLink>
     </div>
   </span>
