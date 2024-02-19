@@ -22,7 +22,7 @@ const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () =>
     </div>
     <div class="md:text-start md:ml-3">
       last updated on <NuxtLink :href="commits[0].html_url" target="_blank">
-        <NuxtTime :datetime="commits[0].commit.committer.date" month="long" day="numeric" year="numeric" :locale="locale" /> <Icon name="mdi:github" />
+        <NuxtTime :datetime="commits[0].commit.committer.date" month="long" day="numeric" year="numeric" :locale="locale" /> <Icon name="mdi:github" class="-mt-1" />
       </NuxtLink>
     </div>
   </span>
