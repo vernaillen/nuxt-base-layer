@@ -24,12 +24,18 @@ importers:
         specifier: ^0.3.8
         version: 0.3.8(vue@3.4.21)
     devDependencies:
+      '@iconify-json/logos':
+        specifier: ^1.1.42
+        version: 1.1.42
+      '@iconify-json/mdi':
+        specifier: ^1.1.64
+        version: 1.1.64
       '@nuxt/devtools':
         specifier: 1.1.4
         version: 1.1.4(@unocss/reset@0.58.7)(floating-vue@5.2.2)(nuxt@3.11.1)(unocss@0.58.7)(vite@5.2.6)(vue@3.4.21)
-      '@nuxtjs/color-mode':
-        specifier: ^3.3.3
-        version: 3.3.3
+      '@nuxt/ui':
+        specifier: ^2.15.0
+        version: 2.15.0(nuxt@3.11.1)(vite@5.2.6)(vue@3.4.21)
       '@nuxtjs/eslint-config-typescript':
         specifier: ^12.1.0
         version: 12.1.0(eslint@8.57.0)(typescript@5.4.3)
@@ -42,9 +48,6 @@ importers:
       nuxt:
         specifier: ^3.11.1
         version: 3.11.1(@types/node@20.11.30)(@unocss/reset@0.58.7)(eslint@8.57.0)(floating-vue@5.2.2)(typescript@5.4.3)(unocss@0.58.7)(vite@5.2.6)
-      nuxt-icon:
-        specifier: ^0.6.10
-        version: 0.6.10(nuxt@3.11.1)(vite@5.2.6)(vue@3.4.21)
       typescript:
         specifier: ^5.4.3
         version: 5.4.3
@@ -786,6 +789,18 @@ packages:
 
   /@iconify-json/heroicons@1.1.20:
     resolution: {integrity: sha512-puNt1al/rDw8Rb5x8sfk20UA8AQjMskLMh63nSUBj+8I0lQ7LtX+0Qn8wow2xTXTEsynJ9xXLD8Aat53e0qi8A==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/logos@1.1.42:
+    resolution: {integrity: sha512-/f+frtPm3m3Z30oy8Pk+QqRDkbmAiIaWGPl5CmsCXm15MVfvw9a/V/gD7WzdyuSGAZcFuQaqbHXj92y/n+2ifg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/mdi@1.1.64:
+    resolution: {integrity: sha512-zGeo5TjhNFAY6FmSDBLAzDO811t77r6v/mDi7CAL9w5eXqKez6bIjk8R9AL/RHIeq44ALP4Ozr4lMqFTkHr7ug==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true

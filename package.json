@@ -1,7 +1,7 @@
 {
   "name": "@vernaillen/nuxt-base-layer",
   "type": "module",
-  "version": "0.2.29",
+  "version": "0.3.0",
   "main": "./nuxt.config.ts",
   "typings": "./index.d.ts",
   "scripts": {
@@ -22,13 +22,14 @@
     "vue3-lazyload": "^0.3.8"
   },
   "devDependencies": {
+    "@iconify-json/logos": "^1.1.42",
+    "@iconify-json/mdi": "^1.1.64",
     "@nuxt/devtools": "1.1.4",
-    "@nuxtjs/color-mode": "^3.3.3",
+    "@nuxt/ui": "^2.15.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "changelogen": "^0.5.5",
     "eslint": "^8.57.0",
     "nuxt": "^3.11.1",
-    "nuxt-icon": "^0.6.10",
     "typescript": "^5.4.3"
   }
 }
