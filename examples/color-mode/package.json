@@ -10,9 +10,9 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.11.4",
-    "@types/node": "^20.11.26",
-    "nuxt": "^3.10.3",
-    "nuxt-icon": "^0.6.9"
+    "@types/node": "^20.11.30",
+    "nuxt": "^3.11.1",
+    "nuxt-icon": "^0.6.10"
   },
   "dependencies": {
     "@vernaillen/nuxt-base-layer": "workspace:^"
