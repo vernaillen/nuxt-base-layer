@@ -11,7 +11,6 @@
     "preview": "nuxi preview .playground",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "postinstall": "npx nuxi@latest prepare",
     "release": "pnpm run build && changelogen --release && npm publish --access public && git push --follow-tags"
   },
   "dependencies": {
