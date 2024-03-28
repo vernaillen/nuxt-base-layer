@@ -14,6 +14,8 @@
     "release": "pnpm run build && changelogen --release && npm publish --access public && git push --follow-tags"
   },
   "dependencies": {
+    "@iconify-json/logos": "^1.1.42",
+    "@iconify-json/mdi": "^1.1.64",
     "@nuxt/image": "1.4.0",
     "@nuxt/ui": "^2.15.0",
     "@vueuse/core": "^10.9.0",
@@ -22,8 +24,6 @@
     "vue3-lazyload": "^0.3.8"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.42",
-    "@iconify-json/mdi": "^1.1.64",
     "@nuxt/devtools": "1.1.4",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "changelogen": "^0.5.5",
