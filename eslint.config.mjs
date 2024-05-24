@@ -1,15 +1,19 @@
-import withNuxt from './.nuxt/eslint.config.mjs'
+import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
 
-export default withNuxt(
-  {
-    files: ['**/pages/*.vue'],
-    rules: {
-      'vue/multi-word-component-names': 'off'
-    }
+export default createConfigForNuxt({
+  features: {
+    tooling: true
   },
-  {
-    ignores: [
-      '**/public/sbi/*'
-    ]
+},
+{
+  files: ['**/pages/*.vue'],
+  rules: {
+    'vue/multi-word-component-names': 'off'
   }
-)
+},
+{
+  ignores: [
+    '**/public/sbi/*'
+  ]
+})
+
