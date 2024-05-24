@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.8
+
+[compare changes](https://github.com/vernaillen/nuxt-base-layer/compare/v0.3.7...v0.3.8)
+
 ## v0.3.7
 
 [compare changes](https://github.com/vernaillen/nuxt-base-layer/compare/v0.3.5...v0.3.7)
