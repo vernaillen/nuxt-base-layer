@@ -27,7 +27,7 @@ if (igConfig.enabled) {
       },
       {
         id: 'sbi_scripts-js-extra',
-        innerHTML: '/* <![CDATA[ */ var sb_instagram_js_options = { "font_method": "svg", "resized_url": "' + igConfig.wpBaseUrl + 'wp-content\/uploads\/sb-instagram-feed-images\/", "placeholder": "' + igConfig.wpBaseUrl + 'wp-content\/plugins\/instagram-feed-pro\/img\/placeholder.png", "br_adjust": "1" }; var sbiTranslations = { "share": "Share" }; /* ]]> */',
+        innerHTML: '/* <![CDATA[ */ var sb_instagram_js_options = { "font_method": "svg", "resized_url": "' + igConfig.wpBaseUrl + 'wp-content/uploads/sb-instagram-feed-images/", "placeholder": "' + igConfig.wpBaseUrl + 'wp-content/plugins/instagram-feed-pro/img/placeholder.png", "br_adjust": "1" }; var sbiTranslations = { "share": "Share" }; /* ]]> */',
         type: 'text/javascript'
       },
       {
@@ -50,12 +50,15 @@ if (igConfig.enabled) {
 onMounted(() => {
   if (window.parent.document) {
     const spinner = window.parent.document.getElementById('iframeLoadingSpinner')
-    if (spinner) { spinner.classList.add('transition-opacity', 'opacity-0') }
+    if (spinner) {
+      spinner.classList.add('transition-opacity', 'opacity-0')
+    }
   }
 })
 </script>
 
 <template>
+  <!-- eslint-disable vue/no-v-html -->
   <div
     v-if="igContent"
     class="m-auto h-[400px]"

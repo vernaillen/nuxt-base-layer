@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 // Type definitions for iframe-resizer 4.3.6
 // Project: https://github.com/davidjbradshaw/iframe-resizer
 // Definitions by: Armin Baljic <https://github.com/arminbaljic>
@@ -6,21 +8,21 @@ declare module 'iframe-resizer' {
   declare namespace iframeResize {
     // tslint:disable-next-line:interface-name
     interface IFrameObject {
-      close (): void;
+      close (): void
 
-      moveToAnchor (anchor: string): void;
+      moveToAnchor (anchor: string): void
 
-      resize (): void;
+      resize (): void
 
       sendMessage (
         message: any,
         targetOrigin?: string
-      ): void;
+      ): void
     }
 
     // tslint:disable-next-line:interface-name
     interface IFrameComponent extends HTMLIFrameElement {
-      iframeResize: IFrameObject;
+      iframeResize: IFrameObject
     }
 
     // tslint:disable-next-line:interface-name
@@ -29,112 +31,112 @@ declare module 'iframe-resizer' {
        * When enabled changes to the Window size or the DOM will cause the iFrame to resize to the new content size.
        * Disable if using size method with custom dimensions.
        */
-      autoResize?: boolean | undefined;
+      autoResize?: boolean | undefined
       /**
        * Override the body background style in the iFrame.
        */
-      bodyBackground?: string | undefined;
+      bodyBackground?: string | undefined
       /**
        * Override the default body margin style in the iFrame. A string can be any valid value for the
        * CSS margin attribute, for example '8px 3em'. A number value is converted into px.
        */
-      bodyMargin?: number | string | undefined;
+      bodyMargin?: number | string | undefined
       /**
        * Override the default body padding style in the iFrame. A string can be any valid value for the
        * CSS margin attribute, for example '8px 3em'. A number value is converted into px.
        */
-      bodyPadding?: number | string | undefined;
+      bodyPadding?: number | string | undefined
       /**
        * When set to true, only allow incoming messages from the domain listed in the src property of the iFrame tag.
        * If your iFrame navigates between different domains, ports or protocols; then you will need to
        * provide an array of URLs or disable this option.
        */
-      checkOrigin?: boolean | string[] | undefined;
+      checkOrigin?: boolean | string[] | undefined
       /**
        * When enabled in page linking inside the iFrame and from the iFrame to the parent page will be enabled.
        */
-      inPageLinks?: boolean | undefined;
+      inPageLinks?: boolean | undefined
       /**
        * Height calculation method.
        */
-      heightCalculationMethod?: HeightCalculationMethod | undefined;
+      heightCalculationMethod?: HeightCalculationMethod | undefined
       /**
        * Set iFrame Id
        */
-      id?: string | undefined;
+      id?: string | undefined
       /**
        * In browsers that don't support mutationObserver, such as IE10, the library falls back to using
        * setInterval, to check for changes to the page size.
        */
-      interval?: number | undefined;
+      interval?: number | undefined
       /**
        * Setting the log option to true will make the scripts in both the host page and the iFrame output
        * everything they do to the JavaScript console so you can see the communication between the two scripts.
        */
-      log?: boolean | undefined;
+      log?: boolean | undefined
       /**
        * Set maximum height of iFrame.
        */
-      maxHeight?: number | undefined;
+      maxHeight?: number | undefined
       /**
        * Set maximum width of iFrame.
        */
-      maxWidth?: number | undefined;
+      maxWidth?: number | undefined
       /**
        * Set minimum height of iFrame.
        */
-      minHeight?: number | undefined;
+      minHeight?: number | undefined
       /**
        * Set minimum width of iFrame.
        */
-      minWidth?: number | undefined;
+      minWidth?: number | undefined
       /**
        * Listen for resize events from the parent page, or the iFrame. Select the 'child' value if the iFrame
        * can be resized independently of the browser window. Selecting this value can cause issues with some
        * height calculation methods on mobile devices.
        */
-      resizeFrom?: 'parent' | 'child' | undefined;
+      resizeFrom?: 'parent' | 'child' | undefined
       /**
        * Enable scroll bars in iFrame.
        */
-      scrolling?: boolean | 'auto' | undefined;
+      scrolling?: boolean | 'auto' | undefined
       /**
        * Resize iFrame to content height.
        */
-      sizeHeight?: boolean | undefined;
+      sizeHeight?: boolean | undefined
       /**
        * Resize iFrame to content width.
        */
-      sizeWidth?: boolean | undefined;
+      sizeWidth?: boolean | undefined
       /**
        * Set the number of pixels the iFrame content size has to change by, before triggering a resize of the iFrame.
        */
-      tolerance?: number | undefined;
+      tolerance?: number | undefined
       /**
        * Width calculation method.
        */
-      widthCalculationMethod?: WidthCalculationMethod | undefined;
+      widthCalculationMethod?: WidthCalculationMethod | undefined
 
       /**
        * Called when iFrame is closed via parentIFrame.close() or iframe.iframeResize.close() methods.
        */
-      closedCallback?(iframeId: string): void;
+      closedCallback?(iframeId: string): void
 
       /**
        * Initial setup callback function.
        */
-      initCallback?(iframe: IFrameComponent): void;
+      initCallback?(iframe: IFrameComponent): void
 
       /**
        * Receive message posted from iFrame with the parentIFrame.sendMessage() method.
        */
-      messageCallback?(data: IFrameMessageData): void;
+      messageCallback?(data: IFrameMessageData): void
 
       /**
        * Function called after iFrame resized. Passes in messageData object containing the iFrame, height, width
        * and the type of event that triggered the iFrame to resize.
        */
-      resizedCallback?(data: IFrameResizedData): void;
+      resizedCallback?(data: IFrameResizedData): void
 
       /**
        * Called before the page is repositioned after a request from the iFrame, due to either an in page link,
@@ -142,7 +144,7 @@ declare module 'iframe-resizer' {
        * If this callback function returns false, it will stop the library from repositioning the page, so that
        * you can implement your own animated page scrolling instead.
        */
-      scrollCallback?(data: IFrameScrollData): boolean;
+      scrollCallback?(data: IFrameScrollData): boolean
     }
 
     // tslint:disable-next-line:interface-name
@@ -151,50 +153,50 @@ declare module 'iframe-resizer' {
        * This option allows you to restrict the domain of the parent page,
        * to prevent other sites mimicking your parent page.
        */
-      targetOrigin?: string | undefined;
+      targetOrigin?: string | undefined
 
       /**
        * Receive message posted from the parent page with the iframe.iframeResize.sendMessage() method.
        */
-      messageCallback?(message: any): void;
+      messageCallback?(message: any): void
 
       /**
        * This function is called once iFrame-Resizer has been initialized after receiving a call from the parent page.
        */
-      readyCallback?(): void;
+      readyCallback?(): void
 
       /**
        * These option can be used to override the option set in the parent page
        */
-      heightCalculationMethod?: HeightCalculationMethod | (() => number) | undefined;
+      heightCalculationMethod?: HeightCalculationMethod | (() => number) | undefined
       /**
        * These option can be used to override the option set in the parent page
        */
-      widthCalculationMethod?: WidthCalculationMethod | (() => number) | undefined;
+      widthCalculationMethod?: WidthCalculationMethod | (() => number) | undefined
     }
 
     type HeightCalculationMethod = 'bodyOffset' | 'bodyScroll' | 'documentElementOffset' | 'documentElementScroll' |
-      'max' | 'min' | 'grow' | 'lowestElement' | 'taggedElement';
+      'max' | 'min' | 'grow' | 'lowestElement' | 'taggedElement'
 
     type WidthCalculationMethod = 'bodyOffset' | 'bodyScroll' | 'documentElementOffset' | 'documentElementScroll' |
-      'max' | 'min' | 'scroll' | 'rightMostElement' | 'taggedElement';
+      'max' | 'min' | 'scroll' | 'rightMostElement' | 'taggedElement'
 
     // tslint:disable-next-line:interface-name
     interface IFramePage {
       /**
        * Turn autoResizing of the iFrame on and off. Returns bool of current state.
        */
-      autoResize (resize?: boolean): boolean;
+      autoResize (resize?: boolean): boolean
 
       /**
        * Remove the iFrame from the parent page.
        */
-      close (): void;
+      close (): void
 
       /**
        * Returns the ID of the iFrame that the page is contained in.
        */
-      getId (): string;
+      getId (): string
 
       /**
        * Ask the containing page for its positioning coordinates.
@@ -203,7 +205,7 @@ declare module 'iframe-resizer' {
        *
        * Pass false to disable the callback.
        */
-      getPageInfo (callback: ((data: PageInfo) => void) | false): void;
+      getPageInfo (callback: ((data: PageInfo) => void) | false): void
 
       /**
        * Scroll the parent page to the coordinates x and y
@@ -211,7 +213,7 @@ declare module 'iframe-resizer' {
       scrollTo (
         x: number,
         y: number
-      ): void;
+      ): void
 
       /**
        * Scroll the parent page to the coordinates x and y relative to the position of the iFrame.
@@ -219,7 +221,7 @@ declare module 'iframe-resizer' {
       scrollToOffset (
         x: number,
         y: number
-      ): void;
+      ): void
 
       /**
        * Send data to the containing page, message can be any data type that can be serialized into JSON. The `targetOrigin`
@@ -229,22 +231,22 @@ declare module 'iframe-resizer' {
       sendMessage (
         message: any,
         targetOrigin?: string
-      ): void;
+      ): void
 
       /**
        * Change the method use to workout the height of the iFrame.
        */
-      setHeightCalculationMethod (method: HeightCalculationMethod): void;
+      setHeightCalculationMethod (method: HeightCalculationMethod): void
 
       /**
        * Change the method use to workout the width of the iFrame.
        */
-      setWidthCalculationMethod (method: WidthCalculationMethod): void;
+      setWidthCalculationMethod (method: WidthCalculationMethod): void
 
       /**
        * Set default target origin.
        */
-      setTargetOrigin (targetOrigin: string): void;
+      setTargetOrigin (targetOrigin: string): void
 
       /**
        * Manually force iFrame to resize. To use passed arguments you need first to disable the `autoResize` option to
@@ -253,67 +255,67 @@ declare module 'iframe-resizer' {
       size (
         customHeight?: string,
         customWidth?: string
-      ): void;
+      ): void
     }
 
     interface PageInfo {
       /**
        * The height of the iframe in pixels
        */
-      iframeHeight: number;
+      iframeHeight: number
       /**
        * The width of the iframe in pixels
        */
-      iframeWidth: number;
+      iframeWidth: number
       /**
        * The height of the viewport in pixels
        */
-      clientHeight: number;
+      clientHeight: number
       /**
        * The width of the viewport in pixels
        */
-      clientWidth: number;
+      clientWidth: number
       /**
        * The number of pixels between the left edge of the containing page and the left edge of the iframe
        */
-      offsetLeft: number;
+      offsetLeft: number
       /**
        * The number of pixels between the top edge of the containing page and the top edge of the iframe
        */
-      offsetTop: number;
+      offsetTop: number
       /**
        * The number of pixels between the left edge of the iframe and the left edge of the iframe viewport
        */
-      scrollLeft: number;
+      scrollLeft: number
       /**
        * The number of pixels between the top edge of the iframe and the top edge of the iframe viewport
        */
-      scrollTop: number;
+      scrollTop: number
     }
 
     // tslint:disable-next-line:interface-name
     interface IFrameResizedData {
-      iframe: IFrameComponent;
-      height: number;
-      width: number;
-      type: string;
+      iframe: IFrameComponent
+      height: number
+      width: number
+      type: string
     }
 
     // tslint:disable-next-line:interface-name
     interface IFrameMessageData {
-      iframe: IFrameComponent;
-      message: any;
+      iframe: IFrameComponent
+      message: any
     }
 
     // tslint:disable-next-line:interface-name
     interface IFrameScrollData {
-      x: number;
-      y: number;
+      x: number
+      y: number
     }
-    function iframeResize (options: IFrameOptions, target: string | HTMLElement): IFrameComponent[];
+    function iframeResize(options: IFrameOptions, target: string | HTMLElement): IFrameComponent[]
   }
   // leave this declaration outside the namespace so the 'require'd import is still callable
-  declare function iframeResize (options: iframeResize.IFrameOptions, target: string | HTMLElement): iframeResize.IFrameComponent[];
-  export = iframeResize;
+  declare function iframeResize(options: iframeResize.IFrameOptions, target: string | HTMLElement): iframeResize.IFrameComponent[]
+  export = iframeResize
   export as namespace iframeResize;
 }

@@ -4,7 +4,7 @@ module.exports = {
     './components/*.{vue,svg}',
     './components/**/*.{vue,svg}',
     './layouts/**/*.{vue,svg}',
-    './pages/**/*.{vue,svg}',
+    './pages/**/*.{vue,svg}'
   ],
   mode: 'jit',
   darkMode: 'class', // or 'media' or 'class'
@@ -14,27 +14,27 @@ module.exports = {
       'md': '720px',
       'lg': '960px',
       'xl': '1140px',
-      '2xl': '1320px',
+      '2xl': '1320px'
     },
     container: {
       center: true,
-      padding: '16px',
+      padding: '16px'
     },
     extend: {
       colors: {
-        'white': '#ECEAEA',
-        'black': '#0c0c0d',
-        'dark': '#333333',
-        'primary': '#9C8E1B'
+        white: '#ECEAEA',
+        black: '#0c0c0d',
+        dark: '#333333',
+        primary: '#9C8E1B'
       },
       boxShadow: {
         signUp: '0px 5px 10px rgba(4, 10, 34, 0.2)',
-        one: '0px 2px 3px rgba(7, 7, 77, 0.05)',
-      },
-    },
+        one: '0px 2px 3px rgba(7, 7, 77, 0.05)'
+      }
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 }

@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-const appConfig = useAppConfig();
+
+const appConfig = useAppConfig()
 const enabled = appConfig.instagram?.enabled
 
 const iframeRef = ref<HTMLIFrameElement>()
 onMounted(() => {
-  if (enabled && iframeRef.value) { iFrameResize({}, iframeRef.value) }
+  if (enabled && iframeRef.value) {
+    iFrameResize({}, iframeRef.value)
+  }
 })
 
 const colorMode = useColorMode()
@@ -18,7 +21,6 @@ watch(() => colorMode.value, (newColorMode) => {
     innerDoc.getElementsByTagName('html')[0].classList.add(newColorMode)
   }
 })
-
 </script>
 
 <template>
@@ -61,9 +63,9 @@ watch(() => colorMode.value, (newColorMode) => {
     You can enabled it by adding this to app.config.ts:<br>
     <code>
       instagram: {
-        enabled: true,
-        wpPageId: 1234,
-        wpBaseUrl: 'https://example.com',
+      enabled: true,
+      wpPageId: 1234,
+      wpBaseUrl: 'https://example.com',
       }
     </code>
   </div>

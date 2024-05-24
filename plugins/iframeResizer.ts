@@ -1,6 +1,5 @@
-
-export default defineNuxtPlugin((nuxtApp) => {
-  const appConfig = useAppConfig();
+export default defineNuxtPlugin((_nuxtApp) => {
+  const appConfig = useAppConfig()
   if (appConfig.instagram?.enabled) {
     useHead({
       script: [

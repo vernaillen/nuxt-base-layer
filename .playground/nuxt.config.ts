@@ -1,4 +1,3 @@
-
 export default defineNuxtConfig({
   extends: [
     '../',
@@ -7,4 +6,16 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/ui'
   ],
+  eslint: {
+    config: {
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs'
+      }
+    },
+    checker: {
+      lintOnStart: true,
+      fix: true
+    }
+  }
 })

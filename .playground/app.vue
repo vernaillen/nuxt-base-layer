@@ -18,11 +18,16 @@ const links = [
 
 <template>
   <UMain>
-    <UHeader v-if="!isIG" title="@vernaillen/nuxt-base-layer" :links="links" class="p-4" />
-    <NuxtPage/>
+    <UHeader
+      v-if="!isIG"
+      title="@vernaillen/nuxt-base-layer"
+      :links="links"
+      class="p-4"
+    />
+    <NuxtPage />
     <UFooter v-if="!isIG">
       <template #center>
-        <GitHub/>
+        <GitHub />
       </template>
     </UFooter>
   </UMain>
