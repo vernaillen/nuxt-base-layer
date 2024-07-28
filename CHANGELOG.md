@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.3.11
+
+[compare changes](https://github.com/vernaillen/nuxt-base-layer/compare/v0.3.10...v0.3.11)
+
+### 🏡 Chore
+
+- **release:** V0.3.10 ([5eb54b3](https://github.com/vernaillen/nuxt-base-layer/commit/5eb54b3))
+
+### ❤️ Contributors
+
+- Wouter Vernaillen <wouter@vernaillen.com>
+
 ## v0.3.10
 
 [compare changes](https://github.com/vernaillen/nuxt-base-layer/compare/v0.3.8...v0.3.10)
