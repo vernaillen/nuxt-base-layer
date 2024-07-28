@@ -14,5 +14,10 @@ export default defineNuxtConfig({
     public: {
       nuxtVersion: nuxtPkg.version
     }
-  }
+  },
+
+  future: {
+    compatibilityVersion: 4
+  },
+  compatibilityDate: '2024-07-28',
 })

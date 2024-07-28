@@ -17,5 +17,10 @@ export default defineNuxtConfig({
       lintOnStart: true,
       fix: true
     }
-  }
+  },
+
+  future: {
+    compatibilityVersion: 4
+  },
+  compatibilityDate: '2024-07-28',
 })

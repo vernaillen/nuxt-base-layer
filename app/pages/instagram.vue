@@ -62,12 +62,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <NuxtLayout>
     <!-- eslint-disable vue/no-v-html -->
     <div
       v-if="igContent"
       class="m-auto h-[400px]"
       v-html="igContent"
     />
-  </div>
+  </NuxtLayout>
 </template>
