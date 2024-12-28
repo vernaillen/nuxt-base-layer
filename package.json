@@ -1,7 +1,7 @@
 {
   "name": "@vernaillen/nuxt-base-layer",
   "type": "module",
-  "version": "0.3.12",
+  "version": "0.3.13",
   "main": "./nuxt.config.ts",
   "typings": "./index.d.ts",
   "scripts": {
