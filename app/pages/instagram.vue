@@ -66,7 +66,7 @@ onMounted(() => {
     <!-- eslint-disable vue/no-v-html -->
     <div
       v-if="igContent"
-      class="m-auto h-[400px]"
+      class="m-auto h-[400px] w-full"
       v-html="igContent"
     />
   </NuxtLayout>

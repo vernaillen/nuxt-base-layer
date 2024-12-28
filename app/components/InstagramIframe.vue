@@ -24,7 +24,7 @@ watch(() => colorMode.value, (newColorMode) => {
 </script>
 
 <template>
-  <div class="ml-[-11px] mr-[-8px]">
+  <div class="ml-[-11px] mr-[-8px] w-full">
     <div
       v-if="enabled"
       id="iframeLoadingSpinner"

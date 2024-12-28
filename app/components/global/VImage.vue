@@ -10,7 +10,7 @@ export interface Props {
   fit?: string
   format?: string
   // eslint-disable-next-line vue/require-default-prop
-  modifiers?: object
+  modifiers?: string
   finalOpacity?: number
 }
 const props = withDefaults(defineProps<Props>(), {
